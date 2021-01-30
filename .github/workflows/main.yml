@@ -34,7 +34,7 @@ jobs:
         env:
           URL: "${{ secrets.notionurl }}"
         run: |
-          git clone git@github.com:leoncvlt/loconotion.git loconotion
+          git clone https://github.com/leoncvlt/loconotion.git loconotion
           cd loconotion
           docker-compose build loconotion
           LOCONOTION_LOCAL_DIST=./dist docker-compose run loconotion $URL 
