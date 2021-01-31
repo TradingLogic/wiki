@@ -40,7 +40,7 @@ jobs:
           docker-compose build loconotion
           LOCONOTION_LOCAL_DIST=./dist docker-compose run loconotion $URL 
           ls -al ./dist
-          cp dist dist/tradinglogic/* wiki/docs
+          cp dist dist/tradinglogic/* ../wiki/docs
       - uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
