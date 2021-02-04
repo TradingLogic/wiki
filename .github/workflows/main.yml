@@ -39,7 +39,7 @@ jobs:
           cd ..
           git clone https://github.com/leoncvlt/loconotion.git loconotion
           cd loconotion
-          cp -r ../wiki/template/ ./dist/
+          cp -r ../wiki/template/ ./dist/template
           docker-compose build loconotion
           LOCONOTION_LOCAL_DIST=./dist docker-compose run loconotion ./dist/template/wiki.toml
           tree ./dist
