@@ -41,6 +41,8 @@ jobs:
           cd loconotion
           mkdir -p ./dist/template
           cp -r ../wiki/template/* ./dist/template/
+          rm -f ./docker/Dockerfile
+          cp ../wiki/Dockerfile ./docker/
           docker-compose build loconotion
           LOCONOTION_LOCAL_DIST=./dist docker-compose run loconotion ./dist/template/wiki.toml
           tree ./dist
